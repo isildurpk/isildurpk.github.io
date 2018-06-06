@@ -1,0 +1,28 @@
+<html>
+<head>
+	<style type="text/css">
+		#container {
+			border-bottom: 2px solid gray;
+			color: black;
+			text-align: center;
+			margin-top: 25%;
+		}
+
+		#time {
+			font-size: 36px;
+			font-family: consolas;		
+		}
+	</style>
+</head>
+<body>
+	<div id="container">		
+		<span id="time"></span>
+	</div>
+
+	<script type="text/javascript">
+		const time = document.getElementById("time");
+		time.innerHTML = new Date().toLocaleString("ru")
+		setInterval(() => time.innerHTML = new Date().toLocaleString("ru"), 1000);
+	</script>
+</body>
+</html>
